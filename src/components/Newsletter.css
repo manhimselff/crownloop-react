@@ -1,0 +1,40 @@
+/* NEWSLETTER */
+.newsletter-section {
+  position: relative;
+  background-image: url('https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=1920&q=80');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+}
+.newsletter-section::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(10,10,10,0.78);
+  z-index: 1;
+}
+.newsletter-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+.newsletter-icon { width: 64px; height: 64px; border-radius: 50%; background: rgba(184,134,11,0.15); border: 1px solid rgba(184,134,11,0.3); display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; color: var(--gold-light); }
+.newsletter-icon svg { width: 28px; height: 28px; }
+.newsletter-title { font-family: 'Cormorant Garamond', serif; font-size: 34px; font-weight: 600; color: white; margin-bottom: 12px; }
+.newsletter-desc { color: rgba(255,255,255,0.7); font-size: 15px; line-height: 1.7; margin-bottom: 32px; }
+.newsletter-form { display: flex; gap: 12px; max-width: 480px; margin: 0 auto; }
+.newsletter-input { flex: 1; padding: 14px 20px; background: white; border: 1px solid var(--border); border-radius: 12px; color: var(--text-primary); font-size: 14px; font-family: 'DM Sans', sans-serif; outline: none; transition: all 0.3s; }
+.newsletter-input::placeholder { color: var(--text-muted); }
+.newsletter-input:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(184,134,11,0.08); }
+.newsletter-btn { padding: 14px 28px; background: var(--gold); color: white; border: none; border-radius: 12px; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.3s; white-space: nowrap; font-family: 'DM Sans', sans-serif; }
+.newsletter-btn:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(184,134,11,0.2); }
+
+@media (max-width: 640px) {
+  .newsletter-form { flex-direction: column; }
+  .newsletter-title { font-size: 26px; }
+}

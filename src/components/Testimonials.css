@@ -1,0 +1,27 @@
+/* TESTIMONIALS */
+.testimonials-section { background: var(--bg); }
+.testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1200px; margin: 0 auto; }
+.testimonial-card { background: white; border: 1px solid var(--border); border-radius: 24px; padding: 40px 32px; transition: all 0.4s var(--ts); position: relative; overflow: hidden; box-shadow: 0 2px 16px rgba(0,0,0,0.03); }
+.testimonial-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px; background: linear-gradient(90deg, var(--gold), transparent); opacity: 0; transition: opacity 0.4s; }
+.testimonial-card:hover { transform: translateY(-6px); border-color: rgba(184,134,11,0.12); box-shadow: 0 20px 50px rgba(0,0,0,0.06); }
+.testimonial-card:hover::before { opacity: 1; }
+.testimonial-stars { display: flex; gap: 4px; margin-bottom: 20px; }
+.testimonial-stars svg { width: 18px; height: 18px; color: var(--gold); }
+.testimonial-text { font-size: 15px; line-height: 1.8; color: var(--text-secondary); margin-bottom: 24px; font-style: italic; }
+.testimonial-author { display: flex; align-items: center; gap: 14px; }
+.testimonial-avatar { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; border: 2px solid var(--border); }
+.testimonial-name { font-size: 15px; font-weight: 600; color: var(--text-primary); }
+.testimonial-role { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+.testimonials-cta { text-align: center; margin-top: 60px; }
+.testimonials-cta h3 { font-family: 'Cormorant Garamond', serif; font-size: 30px; font-weight: 600; color: var(--text-primary); margin-bottom: 12px; }
+.testimonials-cta p { color: var(--text-secondary); font-size: 15px; margin-bottom: 24px; }
+
+@media (max-width: 1200px) {
+  .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 900px) {
+  .testimonials-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .testimonial-card { padding: 28px 24px; border-radius: 20px; }
+}
